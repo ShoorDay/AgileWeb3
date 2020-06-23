@@ -24,6 +24,9 @@ public class HandPokers {
         load();
     }
 
+    public HandPokers(String pattern) throws Exception {
+    }
+
     public Boolean vs(HandPokers opponent) {
         int thisLargeNumber = this.pokers.get(this.pokers.size() - 1).getNumber().ordinal();
         int opponentLargeNumber = opponent.pokers.get(opponent.pokers.size() - 1).getNumber().ordinal();
