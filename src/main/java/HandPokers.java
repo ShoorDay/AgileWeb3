@@ -8,6 +8,9 @@ public class HandPokers {
     private Boolean twoPair;
     private Boolean threeOfAKind;
 
+    public HandPokers(String pattern) throws Exception {
+    }
+
     public Boolean vs(HandPokers opponent) {
         return null;
     }
