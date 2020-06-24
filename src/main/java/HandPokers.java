@@ -62,9 +62,8 @@ public class HandPokers {
                 case 3:
                     return compareLarge(thisLargeNumber,opponentLargeNumber);
                 case 2:
-                    return compareAll(this.pokers, opponent.pokers);
                 case 4:
-                    return compareLarge(this.num1,opponent.num1);
+                    return compareLarge(this.num1, opponent.num1);
                 case 5:
                     if(compareLarge(this.num2, opponent.num2) != null){
                         return compareLarge(this.num2, opponent.num2);
@@ -128,12 +127,7 @@ public class HandPokers {
                 }
             }
 
-            //judge onePair
-            if(upNumber == nowNumber){
-                onePair = true;
-                sameNumber = true;
-                num1 = nowNumber;
-            }
+
 
             //judge twoPair
             if(onePair && upNumber == nowNumber){
@@ -149,6 +143,13 @@ public class HandPokers {
                 }else {
                     sameNumber = false;
                 }
+            }
+
+            //judge onePair
+            if(upNumber == nowNumber){
+                onePair = true;
+                sameNumber = true;
+                num1 = nowNumber;
             }
             upNumber = nowNumber;
         }
