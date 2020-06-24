@@ -34,7 +34,7 @@ class HandPokersTest {
         } catch (Exception e) {
             assert false : "不能正确解析：" + white;
         }
-        assertEquals(expected, blackPokers.vs(whitePokers), "胜负判断错误");
+        assertEquals(expected, blackPokers.vs(whitePokers), black + "\n      VS\n" + white + "\n");
     }
 
 }
