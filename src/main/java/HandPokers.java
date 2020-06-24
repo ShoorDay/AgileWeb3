@@ -9,7 +9,7 @@ public class HandPokers {
     Boolean twoPair = false;
     Boolean threeOfAKind = false;
 
-    private int num1, num2;
+    private int num1, num2, num3;
 
     HandPokers(String patten) throws Exception {
 
@@ -62,8 +62,9 @@ public class HandPokers {
                 case 3:
                     return compareLarge(thisLargeNumber,opponentLargeNumber);
                 case 2:
+                    return compareAll(this.pokers,opponent.pokers);
                 case 4:
-                    return compareLarge(this.num1, opponent.num1);
+                    return compareLarge(this.num3, opponent.num3);
                 case 5:
                     if(compareLarge(this.num2, opponent.num2) != null){
                         return compareLarge(this.num2, opponent.num2);
@@ -139,7 +140,7 @@ public class HandPokers {
             if (sameNumber == true){
                 if (upNumber == nowNumber){
                     threeOfAKind = true;
-                    num1 = nowNumber;
+                    num3 = nowNumber;
                 }else {
                     sameNumber = false;
                 }
