@@ -41,7 +41,7 @@ class HandPokersTest {
                 Arguments.arguments("2H 3H 5H 6H 4H", "2C 3C 5C 6C 4C", null),  // vs 同花顺
                 Arguments.arguments("2H 3H 5H 6H 4H", "2S 8S AS QS 3S", true),  // vs 同花
                 Arguments.arguments("2H 3H 5H 6H 4H", "7C 8C 9H TC JS", true),  // vs 顺子
-                Arguments.arguments("2H 3H 5H 6H 4H", "8H 8S 8C 6H 7D", true),  // vs 三条
+                Arguments.arguments("2H 3H 5H 6H 4H", "8H 8S 8C 6S 7D", true),  // vs 三条
                 Arguments.arguments("2H 3H 5H 6H 4H", "7C 7C KH KC 4S", true),  // vs 两对
                 Arguments.arguments("2H 3H 5H 6H 4H", "2S 8C TS KH KS", true),  // vs 对子
                 Arguments.arguments("2H 3H 5H 6H 4H", "8H JS KC 9H 7D", true),  // vs 散牌
@@ -54,12 +54,12 @@ class HandPokersTest {
                 Arguments.arguments("7H 2H AH KH QH", "2S 8C TS KD KS", true),  // vs 对子
                 Arguments.arguments("7H 2H AH KH QH", "8H JS KC 9H 7C", true),  // vs 散牌
                 // 顺子
-                Arguments.arguments("7C 8C 9H TC JS", "QC 8C 9H TD JS", false), // vs 顺子
-                Arguments.arguments("7C 8C 9H TC JS", "7C 8C 9H TD JS", null),  // vs 顺子
-                Arguments.arguments("7C 8C 9H TC JS", "7H 7S 8C 6H 7D", true),  // vs 三条
+                Arguments.arguments("7C 8C 9H TC JS", "QC 8D 9H TD JD", false), // vs 顺子
+                Arguments.arguments("7C 8C 9H TC JS", "7C 8D 9H TD JD", null),  // vs 顺子
+                Arguments.arguments("7C 8D 9H TC JS", "7H 7S 8C 6H 7D", true),  // vs 三条
                 Arguments.arguments("7C 8C 9H TC JS", "JC JD KH 2C KS", true),  // vs 两对
-                Arguments.arguments("7C 8C 9H TC JS", "2S 8C TS KH KS", true),  // vs 对子
-                Arguments.arguments("7C 8C 9H TC JS", "8H JS KC 9H 7D", true),  // vs 散牌
+                Arguments.arguments("7C 8D 9H TC JS", "2S 8C TS KH KS", true),  // vs 对子
+                Arguments.arguments("7C 8C 9H TC JS", "8H JD KC 9H 7D", true),  // vs 散牌
                 // 三条
                 Arguments.arguments("JC JD KH JS KS", "8H 8S 8C 6H 7D", true),  // vs 三条
                 Arguments.arguments("JC JD KH JS KS", "QS QC 8H QD 3S", false), // vs 三条
@@ -67,14 +67,14 @@ class HandPokersTest {
                 Arguments.arguments("JC JD KD JS KS", "2S 8C TS KH KS", true),  // vs 对子
                 Arguments.arguments("JC JD KH JS KS", "8H JS KC 9H 7D", true),  // vs 散牌
                 // 两对
-                Arguments.arguments("JC JS KH QC KS", "TC TC KD KC 4S", true),  // vs 两对
-                Arguments.arguments("JC JS AH QC AS", "TC TC KD KC 4S", true),  // vs 两对
+                Arguments.arguments("JC JS KH QC KS", "TC TH KD KC 4S", true),  // vs 两对
+                Arguments.arguments("JC JS AH QC AS", "TC TH KD KC 4S", true),  // vs 两对
                 Arguments.arguments("JC JS KD QC KS", "JD JH KH KC QS", null),  // vs 两对
-                Arguments.arguments("3C QC KD QC 3S", "2S 8C TS KH KS", true),  // vs 对子
+                Arguments.arguments("3C QH KD QC 3S", "2S 8C TS KH KS", true),  // vs 对子
                 Arguments.arguments("JC JD KH QC KS", "8H JS KC 9H 7D", true),  // vs 散牌
                 // 对子
                 Arguments.arguments("JC JS 8H TC 6S", "2S 8C TS KH KS", false), // vs 对子
-                Arguments.arguments("JC JS 8H TD 9S", "JS 8C TS JH 7S", true),  // vs 对子
+                Arguments.arguments("JC JD 8H TD 9S", "JS 8C TS JH 7S", true),  // vs 对子
                 Arguments.arguments("JC JD 8H TC 6S", "6S 8C TS JH JS", null),  // vs 对子
                 Arguments.arguments("TC JC 5H 7D 5S", "8H JS KC 9H 7S", true),  // vs 散牌
                 // 散牌
